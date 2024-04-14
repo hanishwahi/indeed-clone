@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.fa-solid,
+.fas {
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+/* input search  */
+.container1 {
+  max-width: 900px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  border-radius: 10px;
+  text-align: end;
+  box-shadow: 0px 0px 5px 0px #ccc;
+}
+.input-group-inner {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-inner input {
+  width: 100%;
+
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.input-group button {
+  padding: 10px 15px;
+  background-color: #2557a7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* job feed  */
+
+.job-feed {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.job-feed h3 {
+  font-size: 22px;
+  font-weight: 600;
+  border-bottom: 4px solid #2557a7;
+  width: 105px;
+  margin: 0;
+  padding: 8px;
+}
+.jobfeed-inner {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-group input,
+  .input-group button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
