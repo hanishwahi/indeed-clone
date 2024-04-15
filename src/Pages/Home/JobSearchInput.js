@@ -15,34 +15,36 @@ function JobSearchInput() {
         <>
             <div className="container1">
                 <form onSubmit={handleSubmit}>
-                    <Row className="input-group">
-                        <Col lg="5" className='input-group-inner' style={{ borderRight: "1px solid #ccc" }}>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input
-                                type="text"
-                                placeholder="Job title"
-                                value={jobTitle}
-                                onChange={(e) => setJobTitle(e.target.value)}
-                            />
-                        </Col>
-                        <Col lg="5" className='input-group-inner'>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <input
-                                type="text"
-                                placeholder="City"
-                                value={city}
-                                onChange={(e) => setCity(e.target.value)}
-                            />
-                        </Col>
-                        <Col lg="2" className='p-0'>
-                            <button type="submit">Find Job</button>
-                        </Col>
+                    <Row>
+                        <div className="input-group">
+                            <Col lg="5" md="5" sm="5" className='input-group-inner'>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input
+                                    type="text"
+                                    placeholder="Job title"
+                                    value={jobTitle}
+                                    onChange={(e) => setJobTitle(e.target.value)}
+                                    className='border-right'
+                                />
+                            </Col>
+                            <Col lg="5" md="5" sm="5" className='input-group-inner'>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input
+                                    type="text"
+                                    placeholder="City"
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
+                                />
+                            </Col>
+                            <Col lg="2" md="2" sm="2" className='p-0'>
+                                <button type="submit">Find Job</button>
+                            </Col>
 
-
+                        </div>
                     </Row>
 
                 </form>
-            </div>
+            </div >
         </>
     )
 }

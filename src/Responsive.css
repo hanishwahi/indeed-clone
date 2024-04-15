@@ -1,0 +1,35 @@
+@media screen and (max-width: 576px) {
+  .mobileDisNone {
+    display: none;
+  }
+  .border-right {
+    border-right: none !important;
+  }
+  .input-group-inner {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  .jobfeed-inner {
+    padding: 12px;
+  }
+  .job-feed h3 {
+    width: 115px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 766px) {
+  .mobileDisNone {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .mobileDisNone {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .menuBar {
+    display: none;
+  }
+}

@@ -33,7 +33,7 @@ function JobFeed() {
                             </Row>
                         </div>
                     </Col>
-                    <Col>
+                    <Col className='mobileDisNone'>
                         <JobApply />
                     </Col>
                 </Row >

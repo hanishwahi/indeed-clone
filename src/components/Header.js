@@ -13,17 +13,17 @@ function Header() {
         <>
             <Container fluid="xxl" className='py-2 border-bottom'>
                 <Row className='align-items-center'>
-                    <Col lg="2">
+                    <Col lg="3" md="9" sm="9" xs="7">
                         <img src={logo1} alt="" width={130} />
                         <img src={logo2} alt="" width={50} />
                     </Col>
-                    <Col lg="6">
+                    <Col lg="5" className='mobileDisNone'>
                         <Link to='/'>Home</Link>
                     </Col>
-                    <Col lg="2" className='d-flex justify-content-around'>
+                    <Col lg="2" xs="3" md="2" sm="2" className='d-flex justify-content-around'>
                         <i class="fa-solid fa-message"></i>
                         <i class="fa-solid fa-bell"></i>
-                        <div className='custom-dropdown'>
+                        <div className='custom-dropdown mobileDisNone'>
                             <i class="fa-solid fa-user" onClick={handleItemClick}></i>
                             {isOpen &&
                                 <>
@@ -37,7 +37,8 @@ function Header() {
                         </div>
 
                     </Col>
-                    <Col lg="2"><Link>Employers / Post Job </Link></Col>
+                    <Col lg="2" className='mobileDisNone'><Link>Employers / Post Job </Link></Col>
+                    <Col xs="2" sm="1" className='text-end menuBar'><i class="fa-solid fa-bars" style={{ fontSize: "26px" }}></i></Col>
                 </Row>
             </Container>
         </>

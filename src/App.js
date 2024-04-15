@@ -1,4 +1,5 @@
 import './App.css';
+import './Responsive.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
