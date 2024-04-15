@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import JobApply from './JobApply'
 
 function JobFeed() {
     return (
@@ -11,39 +12,29 @@ function JobFeed() {
                 <Row className='py-3'>
                     <Col>
                         <div className='jobfeed-inner'>
-                            <Row><p>New</p></Row>
-                            <Row><h2>Web Developer</h2></Row>
-                            <Row><p>Company Name</p></Row>
-                            <Row><p>Location</p></Row>
                             <Row>
-                                <Col>Upto 20000</Col>
-                                <Col>Full-time</Col>
-                                <Col>Day Shift</Col>
+                                <div className='jobfeed-head'>
+                                    <p>New</p>
+                                    <h2>Web Developer</h2>
+                                    <div>
+                                        <p>Company Name</p>
+                                        <p>Location</p>
+                                    </div>
+                                </div>
+                            </Row>
+                            <Row className='mt-3 jobfeed-salary'>
+                                <p>Upto 20000</p>
+                                <p>Full-time</p>
+                                <p>Day Shift</p>
                             </Row>
                             <Row>
                                 <p>Easily apply</p>
                                 <p>Posted 1 day ago </p>
                             </Row>
-
                         </div>
                     </Col>
                     <Col>
-                        <div className='jobfeed-inner'>
-                            <Row><p>New</p></Row>
-                            <Row><h2>Web Developer</h2></Row>
-                            <Row><p>Company Name</p></Row>
-                            <Row><p>Location</p></Row>
-                            <Row>
-                                <Col>Upto 20000</Col>
-                                <Col>Full-time</Col>
-                                <Col>Day Shift</Col>
-                            </Row>
-                            <Row>
-                                <p>Easily apply</p>
-                                <p>Posted 1 day ago </p>
-                            </Row>
-
-                        </div>
+                        <JobApply />
                     </Col>
                 </Row >
             </Container>
