@@ -17,7 +17,7 @@ function JobSearchInput() {
                 <form onSubmit={handleSubmit}>
                     <Row>
                         <div className="input-group">
-                            <Col lg="5" md="5" sm="5" className='input-group-inner'>
+                            <Col lg="5" md="5" sm="5" xs="12" className='input-group-inner'>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input
                                     type="text"
@@ -27,7 +27,7 @@ function JobSearchInput() {
                                     className='border-right'
                                 />
                             </Col>
-                            <Col lg="5" md="5" sm="5" className='input-group-inner'>
+                            <Col lg="5" md="5" sm="5" xs="12" className='input-group-inner'>
                                 <i class="fa-solid fa-location-dot"></i>
                                 <input
                                     type="text"
@@ -36,7 +36,7 @@ function JobSearchInput() {
                                     onChange={(e) => setCity(e.target.value)}
                                 />
                             </Col>
-                            <Col lg="2" md="2" sm="2" className='p-0'>
+                            <Col lg="2" md="2" sm="2" xs="12" className='p-0'>
                                 <button type="submit">Find Job</button>
                             </Col>
 

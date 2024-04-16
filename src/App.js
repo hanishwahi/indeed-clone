@@ -5,6 +5,11 @@ import Header from './components/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Signup from './components/Signup';
+import Profile from './Pages/Profile/Profile';
+import Settings from './Pages/Settings/Settings';
+import SavedJobs from './Pages/SavedJobs/SavedJobs';
+import JobPost from './Pages/EmployeerJobPost/JobPost';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -14,6 +19,11 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/account-settings" element={<Settings />} />
+          <Route path="/saved-jobs" element={<SavedJobs />} />
+          <Route path='/job-post' element={<JobPost />} />
         </Routes>
       </BrowserRouter>
     </>

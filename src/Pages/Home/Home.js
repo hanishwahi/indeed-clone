@@ -1,12 +1,12 @@
 import React from 'react'
 import JobSearchInput from './JobSearchInput'
-import JobFeed from './JobFeed'
+import JobFeedTab from './JobFeedTab'
 
 function Home() {
     return (
         <>
             <JobSearchInput />
-            <JobFeed />
+            <JobFeedTab />
         </>
     )
 }

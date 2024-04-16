@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [location, setLocation] = useState('');
     const [name, setName] = useState('');
     const [aadharCard, setAadharCard] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -32,7 +34,13 @@ function Signup() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
-
+                <input
+                    type="text"
+                    placeholder="Location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    required
+                />
                 <input
                     type="number"
                     placeholder="Aadhar number"
@@ -55,6 +63,7 @@ function Signup() {
                     required
                 />
                 <button type="submit">Signup</button>
+                <Link to='/login'>Already have account? login</Link>
             </form>
         </div>
 
