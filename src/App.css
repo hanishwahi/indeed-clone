@@ -4,8 +4,18 @@
   font-weight: 900;
   cursor: pointer;
 }
+.fa-solid:hover {
+  color: #ff8e2b;
+}
 
 /* header  */
+
+.header-text a {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .options {
   position: absolute;
   top: 32px;
@@ -35,7 +45,7 @@
   line-height: 46px;
   display: block;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   padding: 0px 10px;
 }
@@ -54,8 +64,6 @@
   max-width: 900px;
   margin: 10px auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
 }
 
 .border-right {
@@ -65,7 +73,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 6px;
   border-radius: 10px;
@@ -75,6 +82,7 @@
 .input-group-inner {
   display: flex;
   align-items: center;
+  padding: 2px 7px;
 }
 
 .input-group-inner input {
@@ -92,14 +100,14 @@
 
 .input-group button {
   padding: 10px 15px;
-  background-color: #a725a7;
+  background-color: #ff8e2b;
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
 .input-group button:hover {
-  background-color: #7a177a;
+  background-color: #eb730a;
 }
 
 /* job feed  */
@@ -113,36 +121,51 @@
 .job-feed h3 {
   font-size: 22px;
   font-weight: 600;
-  border-bottom: 4px solid #a725a7;
+  border-bottom: 4px solid #ff8e2b;
   width: 105px;
   margin: 0;
   padding: 8px;
 }
 .jobfeed-inner {
-  border: 1px solid #a725a730;
+  border: 1px solid #ff8e2b30;
   border-radius: 10px;
   padding: 25px;
+  cursor: pointer;
 }
 .jobfeed-head h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 .jobfeed-head p {
   font-size: 17px;
-  margin: 0px;
+  margin-bottom: 5px;
+  font-weight: 400;
 }
 
 .jobfeed-salary p {
   font-size: 13px;
   margin: 10px;
   font-weight: 500;
-  background-color: #a725a730;
+  background-color: #ff8e2b36;
   padding: 4px 10px;
   width: auto;
 }
+span {
+  font-size: 14px;
+}
+.jobfeed-easy span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.jobfeed-easy p {
+  font-size: 17px;
+  margin: 5px;
+  font-weight: 600;
+}
 .jobfeed-inner a {
-  background-color: #a725a7;
+  background-color: #ff8e2b;
   color: #fff !important;
   padding: 10px 20px;
   border-radius: 10px;
@@ -150,14 +173,18 @@
 
 button.btn.btn-primary {
   width: auto;
-  background-color: #a725a7;
+  background-color: #ff8e2b;
   border: none;
   font-size: 15px;
 }
 
 /* job apply  */
+.sticky {
+  position: sticky;
+  top: 0;
+}
 .jobapply-inner {
-  border: 1px solid #a725a730;
+  border: 1px solid #ff8e2b30;
   border-radius: 10px;
   padding: 25px;
   height: 535px;
@@ -176,12 +203,12 @@ button.btn.btn-primary {
   font-size: 13px;
   margin: 10px;
   font-weight: 500;
-  background-color: #a725a730;
+  background-color: #ff8e2b30;
   padding: 4px 10px;
   width: auto;
 }
 .jobapply-inner a {
-  background-color: #a725a7;
+  background-color: #ff8e2b;
   color: #fff !important;
   padding: 10px 20px;
   border-radius: 10px;
@@ -212,7 +239,7 @@ button.btn.btn-primary {
 }
 
 .login-form button {
-  background-color: #a725a7;
+  background-color: #ff8e2b;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -222,10 +249,90 @@ button.btn.btn-primary {
 }
 
 .login-form button:hover {
-  background-color: #7a177a;
+  background-color: #eb730a;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
+/* signup.css */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  margin-top: 20px;
+}
+
+.signup-form {
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.signup-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.signup-form button {
+  background-color: #ff8e2b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.signup-form button:hover {
+  background-color: #eb730a;
+}
+
+/* profile section  */
+.profile-main {
+  border: 1px solid #ff8e2b36;
+  padding: 20px;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+.profile-inner h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+.profile-inner h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.profile-inner img {
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 80px;
+}
+.profile-inner p {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.profile-inner i {
+  color: #aaaaaa;
+  font-size: 17px;
+  text-align: center;
+  width: 35px;
+}
+
+/* footer  */
+.footer {
+  background-color: #ff8e2b36;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
 }

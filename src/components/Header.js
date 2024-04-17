@@ -16,7 +16,7 @@ function Header() {
             <Container fluid="xxl" className='py-2 border-bottom'>
                 <Row className='align-items-center'>
                     <Col lg="8" md="9" sm="9" xs="7">
-                        <Link to='/' onClick={() => setIsOpen(false)}> <img src={logo1} alt="" width={180} /></Link>
+                        <Link to='/' onClick={() => setIsOpen(false)}> <img src={logo1} alt="" width={100} /></Link>
                         {/* <Link to='/' className='mobileDisNone ms-3'>Home</Link> */}
                     </Col>
 
@@ -43,7 +43,7 @@ function Header() {
                         </div>
 
                     </Col>
-                    <Col lg="2" className='mobileDisNone'><Link to='/job-post' onClick={() => setIsOpen(false)}>Employers / Post Job </Link></Col>
+                    <Col lg="2" className='mobileDisNone header-text'><Link to='/job-post' onClick={() => setIsOpen(false)}>Employers / Post Job </Link></Col>
                     <Col xs="2" sm="1" className='text-end menuBar'><i class="fa-solid fa-bars" style={{ fontSize: "26px" }}></i></Col>
                 </Row>
             </Container >

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 function JobApply() {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
+
+
     return (
         <>
             <div className="sticky">
@@ -28,7 +30,7 @@ function JobApply() {
                         <p>Posted 1 day ago </p>
                     </Row>
                     {
-                        loggedUser ? <Link>Apply Now</Link> : <Link to='/login'>Apply Now</Link>
+                        loggedUser ? <Link to="/">Apply Now</Link> : <Link to='/login'>Apply Now</Link>
                     }
 
                 </div>

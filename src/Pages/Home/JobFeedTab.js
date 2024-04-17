@@ -11,10 +11,10 @@ function JobFeedTab() {
             </div>
             <Container>
                 <Row>
-                    <Col>
+                    <Col lg="5">
                         <JobFeed />
                     </Col>
-                    <Col className="mobileDisNone">
+                    <Col lg="7" className="mobileDisNone">
                         <JobApply />
                     </Col>
                 </Row>

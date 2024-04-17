@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Signup() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [location, setLocation] = useState('');
     const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [location, setLocation] = useState('');
     const [aadharCard, setAadharCard] = useState('');
+    const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
     const handleSubmit = (e) => {
@@ -18,8 +19,8 @@ function Signup() {
     return (
 
 
-        <div className="login-container">
-            <form onSubmit={handleSubmit} className="login-form">
+        <div className="signup-container">
+            <form onSubmit={handleSubmit} className="signup-form">
                 <input
                     type="text"
                     placeholder="Name"
@@ -32,6 +33,13 @@ function Signup() {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="number"
+                    placeholder="Phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     required
                 />
                 <input
@@ -63,10 +71,9 @@ function Signup() {
                     required
                 />
                 <button type="submit">Signup</button>
-                <Link to='/login'>Already have account? login</Link>
+                <Link to='/signup'>Already have account? signup</Link>
             </form>
         </div>
-
     )
 }
 

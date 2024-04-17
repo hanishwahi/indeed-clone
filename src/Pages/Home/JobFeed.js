@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 
 function JobFeed() {
 
@@ -56,22 +56,23 @@ function JobFeed() {
                             <div className='jobfeed-inner mb-3'>
                                 <Row>
                                     <div className='jobfeed-head'>
-                                        <p>New</p>
                                         <h2>{item.title}</h2>
                                         <div>
-                                            <p>{item.companyName}</p>
-                                            <p>{item.location}</p>
+                                            <p>{item.companyName} -{item.location}</p>
                                         </div>
                                     </div>
                                 </Row>
-                                <Row className='mt-3 jobfeed-salary'>
+                                <Row className='mt-1 jobfeed-salary'>
                                     <p>Upto {item.salary}</p>
                                     <p>{item.type}</p>
                                     <p>{item.shift}</p>
                                 </Row>
                                 <Row>
-                                    <p>Easily apply</p>
-                                    <p>Posted 1 day ago </p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum pariatur itaque non voluptatem natus dolorum numquam vitae earum enim?</span>
+                                </Row>
+                                <Row className='jobfeed-easy justify-content-between'>
+                                    <Col><p>Easily apply</p></Col>
+                                    <Col className='text-end'><span>1 hr </span></Col>
                                 </Row>
                             </div>
                         </>

@@ -10,6 +10,7 @@ import Settings from './Pages/Settings/Settings';
 import SavedJobs from './Pages/SavedJobs/SavedJobs';
 import JobPost from './Pages/EmployeerJobPost/JobPost';
 import Login from './components/Login';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/saved-jobs" element={<SavedJobs />} />
           <Route path='/job-post' element={<JobPost />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

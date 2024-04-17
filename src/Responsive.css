@@ -19,6 +19,15 @@
   .input-group button {
     width: 100%;
   }
+  .profile-main {
+    width: 90%;
+  }
+  .profile-inner h1 {
+    font-size: 24px;
+  }
+  .profile-inner h3 {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 577px) and (max-width: 766px) {
   .mobileDisNone {
@@ -27,10 +36,16 @@
   .job-feed h3 {
     width: 105px;
   }
+  .profile-main {
+    width: 90%;
+  }
 }
 @media screen and (min-width: 767px) and (max-width: 992px) {
   .mobileDisNone {
     display: none;
+  }
+  .profile-main {
+    width: 90%;
   }
 }
 @media screen and (min-width: 993px) {
