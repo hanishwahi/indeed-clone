@@ -198,6 +198,7 @@ button.btn.btn-primary {
 .jobapply-head p {
   font-size: 17px;
   margin: 0px;
+  text-transform: capitalize;
 }
 
 .jobapply-salary p {
@@ -255,12 +256,17 @@ button.btn.btn-primary {
 }
 
 /* signup.css */
-
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
   margin-top: 20px;
 }
 
