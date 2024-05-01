@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { cities } from '../../assets/Cities';
 
 function JobSearchInput() {
     const [jobTitle, setJobTitle] = useState('');
@@ -11,6 +12,8 @@ function JobSearchInput() {
         console.log('Searching for job with title:', jobTitle, 'in city:', city);
     };
 
+    const city1 = cities.filter((item) => item.name.toLowerCase() === city)
+    console.log("cities", city1);
     return (
         <>
             <div className="container1">

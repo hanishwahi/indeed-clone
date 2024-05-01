@@ -1,10 +1,10 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-
+import { useSearchParams } from 'react-router-dom'
 function JobFeed() {
-
     const jobs = [
         {
+            id: 1,
             title: "Web Developer",
             companyName: "infosys",
             location: "delhi",
@@ -13,6 +13,7 @@ function JobFeed() {
             shift: "Day Shift"
         },
         {
+            id: 2,
             title: "Backend Developer",
             companyName: "wipro",
             location: "banglore",
@@ -21,39 +22,45 @@ function JobFeed() {
             shift: "Day Shift"
         },
         {
-            title: "Backend Developer",
-            companyName: "wipro",
-            location: "banglore",
-            salary: "80000",
+            id: 3,
+            title: "Digital marketing",
+            companyName: "seo disovery",
+            location: "mohali",
+            salary: "30000",
+            type: "full time",
+            shift: "night Shift"
+        },
+        {
+            id: 4,
+            title: "python developer",
+            companyName: "tcs",
+            location: "noida",
+            salary: "50000",
             type: "full time",
             shift: "Day Shift"
         },
         {
-            title: "Backend Developer",
-            companyName: "wipro",
-            location: "banglore",
-            salary: "80000",
-            type: "full time",
-            shift: "Day Shift"
-        },
-        {
-            title: "Backend Developer",
-            companyName: "wipro",
-            location: "banglore",
-            salary: "80000",
+            id: 5,
+            title: "java Developer",
+            companyName: "amazon",
+            location: "hyderabad",
+            salary: "60000",
             type: "full time",
             shift: "Day Shift"
         }
     ]
+
+    let [searchParams, setSearchParams] = useSearchParams();
+    const handleJobView = (id) => {
+        setSearchParams({ q: id })
+    }
     return (
         <>
-
-
             {
                 jobs.map((item) => {
                     return (
                         <>
-                            <div className='jobfeed-inner mb-3'>
+                            <div onClick={() => handleJobView(item.id)} className='jobfeed-inner mb-3'>
                                 <Row>
                                     <div className='jobfeed-head'>
                                         <h2>{item.title}</h2>
@@ -74,7 +81,7 @@ function JobFeed() {
                                     <Col><p>Easily apply</p></Col>
                                     <Col className='text-end'><span>1 hr </span></Col>
                                 </Row>
-                            </div>
+                            </div >
                         </>
                     )
                 })
@@ -82,5 +89,4 @@ function JobFeed() {
         </>
     )
 }
-
 export default JobFeed
