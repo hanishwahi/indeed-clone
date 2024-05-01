@@ -51,9 +51,12 @@ function JobFeed() {
     ]
 
     let [searchParams, setSearchParams] = useSearchParams();
+    let jobtitle = searchParams.get('q')
+    let cityName = searchParams.get('l')
 
     const handleJobView = (id) => {
-        setSearchParams({ jpi: id })
+        jobtitle ? setSearchParams({ q: jobtitle, l: cityName, jpi: id }) :
+            setSearchParams({ jpi: id })
     }
 
     return (

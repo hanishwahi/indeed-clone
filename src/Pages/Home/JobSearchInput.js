@@ -15,7 +15,6 @@ function JobSearchInput() {
     };
 
     const city1 = cities.filter((item) => item.name.toLowerCase() === city)
-    console.log("cities", city1);
     return (
         <>
             <div className="container1">
