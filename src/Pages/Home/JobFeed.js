@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useSearchParams } from 'react-router-dom'
 function JobFeed() {
@@ -51,9 +51,11 @@ function JobFeed() {
     ]
 
     let [searchParams, setSearchParams] = useSearchParams();
+
     const handleJobView = (id) => {
-        setSearchParams({ q: id })
+        setSearchParams({ jpi: id })
     }
+
     return (
         <>
             {

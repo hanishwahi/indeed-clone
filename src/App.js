@@ -11,6 +11,7 @@ import SavedJobs from './Pages/SavedJobs/SavedJobs';
 import JobPost from './Pages/EmployeerJobPost/JobPost';
 import Login from './components/Login';
 import Footer from './components/Footer';
+import JobFeedTab from './Pages/Home/JobFeedTab';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Header />
         <Routes>
           <Route index element={<Home />} />
+          <Route path='/job/:q/:l/:jpi' element={<JobFeedTab />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
@@ -26,7 +28,6 @@ function App() {
           <Route path="/saved-jobs" element={<SavedJobs />} />
           <Route path='/job-post' element={<JobPost />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   );

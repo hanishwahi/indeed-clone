@@ -5,7 +5,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom'
 function JobApply() {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
     let [searchParams, setSearchParams] = useSearchParams();
-    let selectedJob = searchParams.get('q')
+    let selectedJob = searchParams.get('jpi') ? searchParams.get('jpi') : 1
     const jobs = [
         {
             id: 1,

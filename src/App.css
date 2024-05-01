@@ -164,6 +164,9 @@ span {
   font-size: 17px;
   margin: 5px;
   font-weight: 600;
+  color: #ff8e2b;
+  text-transform: capitalize;
+  text-shadow: 0 0 black;
 }
 .jobfeed-inner a {
   background-color: #ff8e2b;
@@ -194,6 +197,7 @@ button.btn.btn-primary {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
+  text-transform: capitalize;
 }
 .jobapply-head p {
   font-size: 17px;

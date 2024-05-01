@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { cities } from '../../assets/Cities';
+import { useSearchParams } from 'react-router-dom';
 
 function JobSearchInput() {
     const [jobTitle, setJobTitle] = useState('');
     const [city, setCity] = useState('');
+    let [searchParams, setSearchParams] = useSearchParams();
 
-    const handleSubmit = (e) => {
+    let jpi = searchParams.get('jpi') ? searchParams.get('jpi') : 1
+    const handleJobSearch = (e) => {
         e.preventDefault();
-        // Here you can perform your search operation
-        console.log('Searching for job with title:', jobTitle, 'in city:', city);
+        setSearchParams({ q: jobTitle, l: city, jpi: jpi })
     };
 
     const city1 = cities.filter((item) => item.name.toLowerCase() === city)
@@ -17,7 +19,7 @@ function JobSearchInput() {
     return (
         <>
             <div className="container1">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleJobSearch}>
                     <Row>
                         <div className="input-group">
                             <Col lg="5" md="5" sm="5" xs="12" className='input-group-inner'>
