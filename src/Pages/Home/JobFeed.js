@@ -70,6 +70,10 @@ function JobFeed() {
     const handlePagination = (event, page) => {
         console.log(page);
         setCurrentPage(page);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     };
 
     return (
