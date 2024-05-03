@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useSearchParams } from 'react-router-dom'
+import Pagination from '@mui/material/Pagination';
+
 function JobFeed() {
     const jobs = [
         {
@@ -55,42 +57,61 @@ function JobFeed() {
     let cityName = searchParams.get('l')
 
     const handleJobView = (id) => {
-        jobtitle ? setSearchParams({ q: jobtitle, l: cityName, jpi: id }) :
+        jobtitle || cityName ? setSearchParams({ q: jobtitle, l: cityName, jpi: id }) :
             setSearchParams({ jpi: id })
     }
 
+
+    const [currentPage, setCurrentPage] = useState(1); // State to track current page
+    const jobsPerPage = 3; // Number of jobs to display per page
+    const totalJobs = jobs.length;
+    const totalPages = Math.ceil(totalJobs / jobsPerPage);
+
+    const handlePagination = (event, page) => {
+        console.log(page);
+        setCurrentPage(page);
+    };
+
     return (
         <>
-            {
-                jobs.map((item) => {
-                    return (
-                        <>
-                            <div onClick={() => handleJobView(item.id)} className='jobfeed-inner mb-3'>
-                                <Row>
-                                    <div className='jobfeed-head'>
-                                        <h2>{item.title}</h2>
-                                        <div>
-                                            <p>{item.companyName} -{item.location}</p>
-                                        </div>
+            {jobs.slice((currentPage - 1) * jobsPerPage, currentPage * jobsPerPage).map((item) => {
+                return (
+                    <>
+                        <div onClick={() => handleJobView(item.id)} className='jobfeed-inner mb-3'>
+                            <Row>
+                                <div className='jobfeed-head'>
+                                    <h2>{item.title}</h2>
+                                    <div>
+                                        <p>{item.companyName} -{item.location}</p>
                                     </div>
-                                </Row>
-                                <Row className='mt-1 jobfeed-salary'>
-                                    <p>Upto {item.salary}</p>
-                                    <p>{item.type}</p>
-                                    <p>{item.shift}</p>
-                                </Row>
-                                <Row>
-                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum pariatur itaque non voluptatem natus dolorum numquam vitae earum enim?</span>
-                                </Row>
-                                <Row className='jobfeed-easy justify-content-between'>
-                                    <Col><p>Easily apply</p></Col>
-                                    <Col className='text-end'><span>1 hr </span></Col>
-                                </Row>
-                            </div >
-                        </>
-                    )
-                })
+                                </div>
+                            </Row>
+                            <Row className='mt-1 jobfeed-salary'>
+                                <p>Upto {item.salary}</p>
+                                <p>{item.type}</p>
+                                <p>{item.shift}</p>
+                            </Row>
+                            <Row>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum pariatur itaque non voluptatem natus dolorum numquam vitae earum enim?</span>
+                            </Row>
+                            <Row className='jobfeed-easy justify-content-between'>
+                                <Col><p>Easily apply</p></Col>
+                                <Col className='text-end'><span>1 hr </span></Col>
+                            </Row>
+                        </div >
+
+                    </>
+                )
+            })
             }
+
+            <Pagination
+                count={totalPages}
+                onChange={handlePagination}
+                variant="outlined"
+                shape="rounded"
+            />
+
         </>
     )
 }

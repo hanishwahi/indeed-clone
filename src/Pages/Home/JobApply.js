@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Row } from 'react-bootstrap'
-import { Link, useParams, useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 
 function JobApply() {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
@@ -55,7 +55,6 @@ function JobApply() {
     ]
 
     let FilteredSelectedJob = jobs.filter((item) => item.id == selectedJob)
-    console.log(FilteredSelectedJob);
 
     return (
         <>
@@ -78,7 +77,7 @@ function JobApply() {
                                         </div>
                                     </div>
                                 </Row>
-                                <Row className='mt-3 jobapply-salary'>
+                                <Row className='my-3 jobapply-salary border-bottom'>
                                     <p>Upto {item.salary}</p>
                                     <p>{item.type}</p>
                                     <p>{item.shift}</p>
@@ -87,10 +86,55 @@ function JobApply() {
 
                                 <Row>
                                     <div style={{ height: "21rem", overflowY: "scroll" }}>
-                                        <span >
-                                            {item.description}
-                                        </span>
+                                        <h4><strong>Full job description</strong></h4>
+                                        <div>
+                                            <p>Job Description:</p>
+                                            <span >
+                                                {item.description}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <p>Responsibilities:</p>
+                                            <ul>
+                                                <li>Developing new user-facing features using React.js</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Skills:</p>
+                                            <ul>
+                                                <li>Developing new user-facing features using React.js</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Benefits:</p>
+                                            <ul>
+                                                <li>Paid sick time</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Schedule:</p>
+                                            <ul>
+                                                <li>Monday to Friday</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Education:</p>
+                                            <ul>
+                                                <li>Bachelor's (Preferred)</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>Experience:</p>
+                                            <ul>
+                                                <li>total work: 1 year (Preferred)</li>
+                                            </ul>
+                                        </div>
+                                        {
+                                            loggedUser ?
+                                                <div className='my-3 text-end'><Link to="/">Apply Now</Link></div> :
+                                                <div className='my-3 text-end'> <Link to='/login'>Apply Now</Link></div>
 
+                                        }
                                     </div>
 
                                 </Row>

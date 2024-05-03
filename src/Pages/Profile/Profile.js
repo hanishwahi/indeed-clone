@@ -15,6 +15,7 @@ function Profile() {
                         <div className='d-flex align-items-center'><i class="fa-solid fa-envelope"></i> <p>hanishwahi@gmail.com</p></div>
                         <div className='d-flex align-items-center'><i class="fa-solid fa-phone"></i><p>9034130130</p></div>
                         <div className='d-flex align-items-center'><i class="fa-solid fa-location-dot"></i><p>Mohali Punjab</p></div>
+                        <div className='d-flex align-items-center'> <p><strong>Position interested in: React Js </strong></p></div>
                     </Row>
                     <hr />
                     <Row className='profile-inner'>
@@ -25,7 +26,7 @@ function Profile() {
                     <hr />
                     <Row className='profile-inner'>
                         <h3>Portfolio</h3>
-                        <a href="" target='_blank'>abcsdhsdjhdshjhdsj.com</a>
+                        <a href="/" target='_blank'>abcsdhsdjhdshjhdsj.com</a>
                     </Row>
 
                 </Container>
